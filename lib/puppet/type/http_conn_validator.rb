@@ -78,4 +78,9 @@ Puppet::Type.newtype(:http_conn_validator) do
     end
   end
 
+  newparam(:verify_peer) do
+    desc 'Whether to verify the peer credentials, if possible. Verification will not take place if the CA certificate is missing'
+    defaultto true
+  end
+
 end
